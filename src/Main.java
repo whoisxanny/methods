@@ -13,7 +13,6 @@ public class Main {
         System.out.println();
     }
     public static void task1() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Task 1");
         checkYear(2004);
         separate();
@@ -58,7 +57,19 @@ public class Main {
     }
 
     public static void calculateTheTime(int whatIsTheDistance) {
-
+        int days = 0;
+        if (whatIsTheDistance <= 20) {
+            days = 1;
+            System.out.println("Потребуется дней: " + days);
+        }else if (whatIsTheDistance > 20 && whatIsTheDistance <= 60) {
+            days = 2;
+            System.out.println("Потребуется дней: " + days);
+        }else if (whatIsTheDistance > 60 && whatIsTheDistance <= 100) {
+            days = 3;
+            System.out.println("Потребуется дней: " + days);
+        }else {
+            System.out.println("Вы живете так далёко, что курьер чисто физически до вас не доберётся. Прости! Желаю вам купить квартиру в Сити");
+        }
     }
 
 
